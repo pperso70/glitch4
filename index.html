@@ -23,10 +23,13 @@
     <button onclick="sendCommand('LED_OFF')">Éteindre LED</button>
     <div id="data">
         <h2>Données du capteur</h2>
-        <p>RefPosition: <span id="ref_position">--</span></p>
+        <p>T Cycle: <span id="ref_position">--</span></p>
         <p>Position: <span id="position">--</span></p>
         <p>Température radiateur: <span id="temperature">--</span>°C</p>
         <p>RSSI: <span id="rssi">--</span>%</p>
+         <p> redemarrage: <span id=" redemarrage">--</span>%</p>
+
+       
     </div>
     <img id="cameraImage" alt="Image de la caméra">
 
@@ -54,6 +57,9 @@
                 }
                 if (data.rssi) {
                 document.getElementById('rssi').textContent = data.rssi;
+                }
+                if (data.rssi) {
+                document.getElementById('redemarrage').textContent = data.restarts;
                 }
             } else {
                 //console.log("Image reçue, taille:", event.data.length, "bytes");
