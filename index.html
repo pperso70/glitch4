@@ -78,9 +78,6 @@
                 document.getElementById('cameraImage').onload = function() {
                     URL.revokeObjectURL(this.src);
                 }
-
-                //console.log("URL de l'image créée:", imageUrl);
-                reader.readAsArrayBuffer(blob.slice(0, 16));
             }
         };
 
