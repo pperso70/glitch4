@@ -24,7 +24,7 @@
     <div id="data">
         <h2 style="display:inline;">Données du capteur</h2>
         <p style="display:inline;  margin-left: 10px;">glitch</p>
-        <p>T Cycle: <span id="ref_position">--</span></p>
+        <p>T Cycle: <span id="temps_de_cycle">--</span></p>
         <p>Position: <span id="position">--</span></p>
         <p>Température radiateur: <span id="temperature">--</span>°C</p>
         <p>RSSI: <span id="rssi">--</span>%</p>
@@ -48,7 +48,7 @@
                 //console.log("Données capteurs reçues : ", event.data);
                 const data = JSON.parse(event.data);
                 if (data.position) {
-                document.getElementById('ref_position').textContent = data.ref_position;
+                document.getElementById('temps_de_cycle').textContent = data.temps_de_cycle;
                 }
                 if (data.position) {
                 document.getElementById('position').textContent = data.position;
